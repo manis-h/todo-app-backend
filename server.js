@@ -25,7 +25,7 @@ app.use("/task",taskrouter)
 
 app.get("/",(req,res)=>{
     res.send("Server is working ")
-    console.log('Cookies: ', req.cookies)
+    // console.log('Cookies: ', req.cookies)
 
 
 }
