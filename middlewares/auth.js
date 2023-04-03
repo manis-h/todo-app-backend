@@ -4,11 +4,11 @@ import jwt from 'jsonwebtoken'
 import { setCookie } from "../utils/cookies.js";
 export const isAuthenticated= async (req,res,next)=>{
     
-  console.log('Cookies: ', req.cookies)
+  console.log('Cookies: ', JSON.stringify(req.cookies))
 
-  const {token}=req.cookies;
-  console.log(token)
-  if(!token) return res.status(404).json({
+  const token = req.cookies.token;
+  console.log("\n\ntoken "+token)
+  if(!token) return res.status(401).json({
       success:false,
       message:"login first"
   })
