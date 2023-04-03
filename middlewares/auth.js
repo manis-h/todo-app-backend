@@ -13,7 +13,7 @@ export const isAuthenticated= async (req,res,next)=>{
       message:"login first"
   })
   const decoded = jwt.verify(token,'afadakjdakj')
-  req.user =await User.findById(decoded._id);
+  req.user = await User.findById(decoded._id);
   next()
 
 }
