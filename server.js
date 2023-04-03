@@ -9,14 +9,16 @@ import taskrouter from "./routes/task.js";
 import cors from  "cors";
 const app =express();
 // using middleware
+
+app.use(cookieParser())
 app.use(cors({
-    origin:'http://127.0.0.1:5173',
+    origin:'http://127.0.0.1:5174',
     credentials:true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
     sameSite:"none",
     secure:true
 }))
 
-app.use(cookieParser())
 app.use(express.json())
 app.use(router)
 app.use("/task",taskrouter)
