@@ -5,7 +5,7 @@ import User from "../models/user.js";
 const router = express.Router();
 router.post("/user/new",register)
 
-router.post("/user/me",isAuthenticated,getmyProfile)
+router.get("/user/me",isAuthenticated,getmyProfile)
 router.post("/user/login",login)
 router.post("/user/logout",logout)
 
