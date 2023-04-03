@@ -9,5 +9,5 @@ export const setCookie=(user,res,message,statusCode=200)=>{
         success: true,
         message,
             user
-    })
+    }) 
 }
