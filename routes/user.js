@@ -7,7 +7,7 @@ router.post("/user/new",register)
 
 router.get("/user/me",isAuthenticated,getmyProfile)
 router.post("/user/login",login)
-router.post("/user/logout",logout)
+router.get("/user/logout",logout)
 
 router.get("/users/all",getAllusers)
 router
